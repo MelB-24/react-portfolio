@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, animateScroll as scroll } from "react-scroll"
 import { CodeAlt } from "@styled-icons/boxicons-regular/CodeAlt"
 import styled from "@emotion/styled"
 
@@ -54,10 +54,46 @@ function NavBar() {
         <NavWrapper>
             <StyledCodeIcon />
             <LinkWrapper>
-                <StyledLink to="/about">about me</StyledLink>
-                <StyledLink to="/contact-me">contact me</StyledLink>
-                <StyledLink to="/projects">projects</StyledLink>
-                <StyledLink to="/">melissa.bykersma</StyledLink>
+                <StyledLink
+                    to="about"
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+                    about me
+                </StyledLink>
+                <StyledLink
+                    to="contact"
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+                    contact me
+                </StyledLink>
+                <StyledLink
+                    to="projects"
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+                    projects
+                </StyledLink>
+                <StyledLink
+                    to="home"
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+                    melissa.bykersma
+                </StyledLink>
             </LinkWrapper>
         </NavWrapper>
     )

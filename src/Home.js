@@ -30,7 +30,7 @@ const SubHeading = styled.div`
 function Home() {
     return (
         <>
-            <HomeContainer>
+            <HomeContainer id="home">
                 <HomeContent>
                     <Heading>
                         Hello, My name is Melissa Bykersma and I'm a Junior
