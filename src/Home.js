@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "@emotion/styled"
-import About from "./About"
 
 const HomeContainer = styled.div`
     background: linear-gradient(rgba(45, 51, 52, 0.6), rgba(45, 51, 52, 0.6)),
         url("../images/code-background.jpg");
-    height: 80vh;
+    height: 90vh;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -44,7 +43,6 @@ function Home() {
                     </SubHeading>
                 </HomeContent>
             </HomeContainer>
-            <About />
         </>
     )
 }

@@ -9,7 +9,9 @@ const NavWrapper = styled.nav({
     background: "#2d3334",
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
+    position: "fixed",
+    width: "100%"
 })
 
 // TODO needs media query at 745px
