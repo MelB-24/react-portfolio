@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 const HomeContainer = styled.div`
     background: linear-gradient(rgba(45, 51, 52, 0.6), rgba(45, 51, 52, 0.6)),
         url("../images/code-background.jpg");
-    height: 90vh;
+    height: 100vh;
     background-size: cover;
     display: flex;
     align-items: center;

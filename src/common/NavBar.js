@@ -4,7 +4,7 @@ import { CodeAlt } from "@styled-icons/boxicons-regular/CodeAlt"
 import styled from "@emotion/styled"
 
 const NavWrapper = styled.nav({
-    height: "85px",
+    height: "10vh",
     margin: "0",
     background: "#2d3334",
     display: "flex",
