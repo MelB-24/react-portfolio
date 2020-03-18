@@ -13,9 +13,9 @@ function App() {
             <NavBar />
             <Home id='home'/>
             <Footer />
+            <About id='about'/>
             <Projects id='projects'/>
             <ContactMe id='contact'/>
-            <About id='about'/>
         </>
     )
 }
