@@ -19,7 +19,7 @@ const GitHubIcon = styled(Github)`
     &:hover {
         background: #99edcc;
         color: #2d3334;
-        transform: scale(1.1);
+        transform: scale(0.9);
     }
 `
 
@@ -33,7 +33,7 @@ const LinkedinIcon = styled(LinkedinSquare)`
     &:hover {
         background: #99edcc;
         color: #2d3334;
-        transform: scale(1.1);
+        transform: scale(0.9);
     }
 `
 
@@ -47,7 +47,7 @@ const EmailIcon = styled(Email)`
     &:hover {
         background: #99edcc;
         color: #2d3334;
-        transform: scale(1.1);
+        transform: scale(0.9);
     }
 `
 
