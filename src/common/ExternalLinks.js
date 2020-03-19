@@ -4,27 +4,22 @@ import { Github } from "@styled-icons/boxicons-logos/Github"
 import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare"
 import { Email } from "@styled-icons/material-outlined/Email"
 
-const FooterWrapper = styled.footer`
-    height: 10vh;
-    background: #2d3334;
+const LinkWrapper = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 18px 0 18px;
 `
-const LinkWrapper = styled.div``
-
-const ExternalLink = styled.a``
 
 const GitHubIcon = styled(Github)`
     color: #fa8c83;
     height: 40px;
     margin: 8px;
     padding: 8px;
+    transition: transform 0.5s;
 
     &:hover {
         background: #99edcc;
         color: #2d3334;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 `
 
@@ -33,11 +28,12 @@ const LinkedinIcon = styled(LinkedinSquare)`
     height: 40px;
     margin: 8px;
     padding: 8px;
+    transition: transform 0.5s;
 
     &:hover {
         background: #99edcc;
         color: #2d3334;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 `
 
@@ -46,30 +42,29 @@ const EmailIcon = styled(Email)`
     height: 40px;
     margin: 8px;
     padding: 8px;
+    transition: transform 0.5s;
 
     &:hover {
         background: #99edcc;
         color: #2d3334;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 `
 
-function Footer() {
+function ExternalLinks() {
     return (
-        <FooterWrapper>
-            <LinkWrapper>
-                <ExternalLink href="mailto:melissabykersma@gmail.com">
-                    <EmailIcon />
-                </ExternalLink>
-                <ExternalLink href="https://github.com/MelB-24">
-                    <GitHubIcon />
-                </ExternalLink>
-                <ExternalLink href="https://www.linkedin.com/in/melissa-bykersma-3a1467171/">
-                    <LinkedinIcon />
-                </ExternalLink>
-            </LinkWrapper>
-        </FooterWrapper>
+        <LinkWrapper>
+            <a href="mailto:melissabykersma@gmail.com">
+                <EmailIcon />
+            </a>
+            <a href="https://github.com/MelB-24">
+                <GitHubIcon />
+            </a>
+            <a href="https://www.linkedin.com/in/melissa-bykersma-3a1467171/">
+                <LinkedinIcon />
+            </a>
+        </LinkWrapper>
     )
 }
 
-export default Footer
+export default ExternalLinks

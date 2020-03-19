@@ -1,11 +1,12 @@
 import React from "react"
+import styled from "@emotion/styled"
 import { Link, animateScroll as scroll } from "react-scroll"
 import { CodeAlt } from "@styled-icons/boxicons-regular/CodeAlt"
-import styled from "@emotion/styled"
+
+import ExternalLinks from "./ExternalLinks"
 
 const NavWrapper = styled.nav({
     height: "10vh",
-    margin: "0",
     background: "#2d3334",
     display: "flex",
     justifyContent: "space-between",
@@ -14,8 +15,20 @@ const NavWrapper = styled.nav({
     width: "100%"
 })
 
+const StyledCodeIcon = styled(CodeAlt)`
+    color: #fa8c83;
+    height: 65px;
+    width: auto;
+    margin: 0 18px 0 18px;
+`
+
+const PageLinkWrapper = styled.div({
+    display: "flex",
+    margin: "24px"
+})
+
 // TODO needs media query at 745px
-const StyledLink = styled(Link)`
+const StyledPageLink = styled(Link)`
     font-family: "Lato";
     color: white;
     text-decoration: none;
@@ -39,24 +52,12 @@ const StyledLink = styled(Link)`
     }
 `
 
-const StyledCodeIcon = styled(CodeAlt)`
-    color: #fa8c83;
-    height: 65px;
-    width: auto;
-    margin: 0 18px 0 18px;
-`
-
-const LinkWrapper = styled.div({
-    display: "flex",
-    margin: "24px"
-})
-
 function NavBar() {
     return (
         <NavWrapper>
             <StyledCodeIcon />
-            <LinkWrapper>
-                <StyledLink
+            <PageLinkWrapper>
+                <StyledPageLink
                     to="about"
                     activeClass="active"
                     spy={true}
@@ -65,8 +66,8 @@ function NavBar() {
                     duration={500}
                 >
                     about me
-                </StyledLink>
-                <StyledLink
+                </StyledPageLink>
+                <StyledPageLink
                     to="contact"
                     activeClass="active"
                     spy={true}
@@ -75,8 +76,8 @@ function NavBar() {
                     duration={500}
                 >
                     contact me
-                </StyledLink>
-                <StyledLink
+                </StyledPageLink>
+                <StyledPageLink
                     to="projects"
                     activeClass="active"
                     spy={true}
@@ -85,8 +86,8 @@ function NavBar() {
                     duration={500}
                 >
                     projects
-                </StyledLink>
-                <StyledLink
+                </StyledPageLink>
+                <StyledPageLink
                     to="home"
                     activeClass="active"
                     spy={true}
@@ -95,8 +96,9 @@ function NavBar() {
                     duration={500}
                 >
                     melissa.bykersma
-                </StyledLink>
-            </LinkWrapper>
+                </StyledPageLink>
+            </PageLinkWrapper>
+            <ExternalLinks />
         </NavWrapper>
     )
 }
