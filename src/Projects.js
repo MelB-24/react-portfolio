@@ -12,12 +12,19 @@ const Heading = styled.h1`
     padding: 36px;
 `
 
-function Projects() {
-    return (
-        <ProjectWrapper id="projects">
-            <Heading>Projects</Heading>
-        </ProjectWrapper>
-    )
+class Projects extends React.Component {
+    componentDidMount() {
+        const { getGithubApiData } = this.props
+        getGithubApiData()
+    }
+
+    render() {
+        return (
+            <ProjectWrapper id="projects">
+                <Heading>Projects</Heading>
+            </ProjectWrapper>
+        )
+    }
 }
 
 export default Projects

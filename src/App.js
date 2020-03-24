@@ -2,7 +2,7 @@ import React from "react"
 
 import About from "./About"
 import Home from "./Home"
-import Projects from "./Projects"
+import ProjectsContainer from "./ProjectsContainer"
 import ContactMe from "./ContactMe"
 import NavBar from "./common/NavBar"
 
@@ -10,10 +10,10 @@ function App() {
     return (
         <>
             <NavBar />
-            <Home id='home'/>
-            <About id='about'/>
-            <Projects id='projects'/>
-            <ContactMe id='contact'/>
+            <Home id="home" />
+            <About id="about" />
+            <ProjectsContainer id="projects" />
+            <ContactMe id="contact" />
         </>
     )
 }
