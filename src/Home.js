@@ -8,6 +8,7 @@ const HomeContainer = styled.div`
     background-size: cover;
     display: flex;
     align-items: center;
+    border-bottom: solid #fa8c83 6px;
 `
 
 const HomeContent = styled.div`
