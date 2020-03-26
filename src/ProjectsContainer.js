@@ -1,5 +1,12 @@
-import {connect} from 'react-redux'
-import Projects from './Projects'
+import { connect } from "react-redux"
+import Projects from "./Projects"
+
+const mapStateToProps = state => {
+    const { repos } = state.github
+    return {
+        githubRepos: repos
+    }
+}
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -7,4 +14,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(Projects)
+export default connect(mapStateToProps, mapDispatchToProps)(Projects)
