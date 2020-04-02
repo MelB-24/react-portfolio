@@ -3,12 +3,16 @@ import styled from "styled-components"
 import { Github } from "@styled-icons/boxicons-logos/Github"
 
 const ProjectCardWrapper = styled.div`
-    width: 400px;
-    height: 250px;
+    width: 300px;
+    height: 150px;
     font-family: "Lato";
-    background: red;
+    background: white;
     margin: 4px;
     padding: 12px;
+
+    &:hover {
+        background: #99edcc;
+    }
 `
 
 const Heading = styled.h2`
