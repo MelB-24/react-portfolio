@@ -20,7 +20,7 @@ const StyledCodeIcon = styled(CodeAlt)`
     color: #fa8c83;
     height: 65px;
     width: auto;
-    margin: 0 18px 0 18px;
+    margin: 0 202px 0 18px;
     transition: transform 0.5s;
 
     &:hover {

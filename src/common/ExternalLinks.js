@@ -7,6 +7,7 @@ import { Email } from "@styled-icons/material-outlined/Email"
 const LinkWrapper = styled.div`
     display: flex;
     margin: 0 18px 0 18px;
+    width: 220px;
 `
 
 const GitHubIcon = styled(Github)`
