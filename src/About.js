@@ -6,10 +6,10 @@ import image from "./about-illustration.svg"
 // const fadeInRightAnimation = keyframes`${fadeInRight}`
 
 const AboutWrapper = styled.div`
-    height: 90vh;
+    height: calc(100vh - 95px);
     font-family: "Lato";
     color: #2d3334;
-    padding: 36px;
+
     display: flex;
     align-items: center;
     justify-content: center;

@@ -6,7 +6,7 @@ import { CodeAlt } from "@styled-icons/boxicons-regular/CodeAlt"
 import ExternalLinks from "./ExternalLinks"
 
 const NavWrapper = styled.nav({
-    height: "10vh",
+    height: "95px",
     background: "#2d3334",
     display: "flex",
     justifyContent: "space-between",
@@ -70,7 +70,7 @@ function NavBar() {
                     activeClass="active"
                     spy={true}
                     smooth={true}
-                    offset={-70}
+                    offset={-95}
                     duration={500}
                 >
                     home
@@ -80,7 +80,7 @@ function NavBar() {
                     activeClass="active"
                     spy={true}
                     smooth={true}
-                    offset={-70}
+                    offset={-95}
                     duration={500}
                 >
                     about
@@ -90,7 +90,7 @@ function NavBar() {
                     activeClass="active"
                     spy={true}
                     smooth={true}
-                    offset={-70}
+                    offset={-95}
                     duration={500}
                 >
                     projects
@@ -100,7 +100,7 @@ function NavBar() {
                     activeClass="active"
                     spy={true}
                     smooth={true}
-                    offset={-70}
+                    offset={-95}
                     duration={500}
                 >
                     contact

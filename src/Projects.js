@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard"
 
 const ProjectWrapper = styled.div`
     background: #fa8c83;
+    height: calc(100vh - 95px);
 `
 
 const Heading = styled.h1`
