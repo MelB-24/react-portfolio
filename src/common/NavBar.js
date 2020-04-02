@@ -12,7 +12,8 @@ const NavWrapper = styled.nav({
     justifyContent: "space-between",
     alignItems: "center",
     position: "fixed",
-    width: "100%"
+    width: "100%",
+    zIndex: 2
 })
 
 const StyledCodeIcon = styled(CodeAlt)`
