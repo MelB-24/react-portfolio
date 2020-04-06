@@ -23,16 +23,20 @@ const ProjectCardsWrapper = styled.div`
 
 class Projects extends React.Component {
     componentDidMount() {
-        const { getGithubApiData } = this.props
-        getGithubApiData()
+        const { getProjectApiData } = this.props
+        getProjectApiData()
     }
 
     handleProjectCardRender = () => {
-        const { githubRepos } = this.props
+        const { projects, loading } = this.props
 
-        return githubRepos.map((repo, index) => {
-            return <ProjectCard key={index} repo={repo} />
-        })
+        if (!loading) {
+            return projects.map((project, index) => {
+                return <ProjectCard key={index} project={project} />
+            })
+        } else {
+            return <h1>loading</h1>
+        }
     }
 
     render() {
@@ -41,13 +45,6 @@ class Projects extends React.Component {
                 <Heading>Projects</Heading>
                 <ProjectCardsWrapper>
                     {this.handleProjectCardRender()}
-                    <ProjectCard
-                        repo={{
-                            name: "More Coming Soon",
-                            language: null,
-                            html_url: null
-                        }}
-                    />
                 </ProjectCardsWrapper>
             </ProjectWrapper>
         )
