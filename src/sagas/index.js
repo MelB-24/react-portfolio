@@ -1,10 +1,10 @@
 import { takeEvery, all } from "redux-saga/effects"
-import { githubApiDataRequest } from "./githubApiDataSaga"
+import { projectApiDataRequest } from "./projectApiDataSaga"
 
-function* watchGithubApiDataRequest() {
-    yield takeEvery("GITHUB_API_REQUEST", githubApiDataRequest)
+function* watchProjectApiDataRequest() {
+    yield takeEvery("PROJECT_API_REQUEST", projectApiDataRequest)
 }
 
 export default function* rootSaga() {
-    yield all([watchGithubApiDataRequest()])
+    yield all([watchProjectApiDataRequest()])
 }

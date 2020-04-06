@@ -1,7 +1,7 @@
 import axios from "axios"
 
-export const githubApi = () => {
+export const projectApi = () => {
     return axios
-        .get("https://api.github.com/users/MelB-24/repos")
+        .get(process.env.REACT_APP_BACKEND_URL + `projects`)
         .then(res => res)
 }

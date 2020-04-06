@@ -31,13 +31,12 @@ const GitHubLink = styled.a``
 
 class ProjectCard extends React.Component {
     render() {
-        const { repo } = this.props
-        console.log(this.props.repo)
+        const { project } = this.props
         return (
             <ProjectCardWrapper>
-                <Heading>{repo.name}</Heading>
-                <Language>{repo.language}</Language>
-                <GitHubLink href={repo.html_url}>
+                <Heading>{project.title}</Heading>
+                <Language>{project.language}</Language>
+                <GitHubLink href={project.githubLink}>
                     <GitHubIcon />
                 </GitHubLink>
             </ProjectCardWrapper>

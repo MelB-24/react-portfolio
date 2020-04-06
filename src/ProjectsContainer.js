@@ -2,15 +2,13 @@ import { connect } from "react-redux"
 import Projects from "./Projects"
 
 const mapStateToProps = state => {
-    const { repos } = state.github
-    return {
-        githubRepos: repos
-    }
+    const { projects, loading } = state.projects
+    return { projects, loading }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        getGithubApiData: () => dispatch({ type: "GITHUB_API_REQUEST" })
+        getProjectApiData: () => dispatch({ type: "PROJECT_API_REQUEST" })
     }
 }
 
