@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import image from "./about-illustration.svg"
+import { device } from "./deviceSizes"
 // import { fadeInRight } from "react-animations"
 
 // const fadeInRightAnimation = keyframes`${fadeInRight}`
@@ -20,6 +21,10 @@ const AboutTextWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     width: 900px;
+
+    @media ${device.tablet} {
+        max-width: 700px;
+    }
 `
 
 const AboutHeading = styled.h1`
