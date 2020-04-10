@@ -6,12 +6,16 @@ import ProjectCard from "./ProjectCard"
 const ProjectWrapper = styled.div`
     background: #fa8c83;
     height: calc(100vh - 95px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 const Heading = styled.h1`
     font-family: "Lato";
     margin: 0;
-    padding: 36px;
+    color: #2d3334;
+    margin: 36px 36px 0 36px;
 `
 
 const ProjectCardsWrapper = styled.div`
@@ -19,6 +23,14 @@ const ProjectCardsWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     padding: 36px;
+`
+
+const ComingSoonBox = styled.h2`
+    background: #2d3334;
+    display: inline;
+    color: white;
+    padding: 24px;
+    font-family: "Lato";
 `
 
 class Projects extends React.Component {
@@ -46,6 +58,7 @@ class Projects extends React.Component {
                 <ProjectCardsWrapper>
                     {this.handleProjectCardRender()}
                 </ProjectCardsWrapper>
+                <ComingSoonBox>More Coming Soon</ComingSoonBox>
             </ProjectWrapper>
         )
     }
