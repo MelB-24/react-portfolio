@@ -3,7 +3,7 @@ import React from "react"
 import About from "./About"
 import Home from "./Home"
 import ProjectsContainer from "./ProjectsContainer"
-import ContactMe from "./ContactMe"
+import ContactMeContainer from "./ContactMeContainer"
 import NavBar from "./common/NavBar"
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
             <Home id="home" />
             <About id="about" />
             <ProjectsContainer id="projects" />
-            <ContactMe id="contact" />
+            <ContactMeContainer id="contact" />
         </>
     )
 }
