@@ -4,6 +4,7 @@ import { Link, animateScroll as scroll } from "react-scroll"
 import { CodeAlt } from "@styled-icons/boxicons-regular/CodeAlt"
 
 import ExternalLinks from "./ExternalLinks"
+import { device } from "../deviceSizes"
 
 const NavWrapper = styled.nav({
     height: "95px",
@@ -26,6 +27,10 @@ const StyledCodeIcon = styled(CodeAlt)`
     &:hover {
         color: #99edcc;
         transform: scale(0.9);
+    }
+
+    @media ${device.tablet} {
+        margin: 18px;
     }
 `
 
@@ -57,6 +62,10 @@ const StyledPageLink = styled(Link)`
 
     &:hover:after {
         width: 100%;
+    }
+
+    @media ${device.tablet} {
+        margin: 0 12px 0 12px;
     }
 `
 

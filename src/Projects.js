@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import ProjectCard from "./ProjectCard"
+import { device } from "./deviceSizes"
 
 const ProjectWrapper = styled.div`
     background: #fa8c83;
@@ -9,6 +10,10 @@ const ProjectWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media ${device.tablet} {
+        height: 100vh;
+    }
 `
 
 const Heading = styled.h1`
