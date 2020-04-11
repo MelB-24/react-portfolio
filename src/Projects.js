@@ -27,7 +27,7 @@ const ProjectCardsWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 36px;
+    margin: 36px;
 `
 
 const ComingSoonBox = styled.h2`
