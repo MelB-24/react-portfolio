@@ -1,43 +1,41 @@
 import React from "react"
-import styled from "@emotion/styled"
+import styled from "styled-components"
 import { Link, animateScroll as scroll } from "react-scroll"
 import { CodeAlt } from "@styled-icons/boxicons-regular/CodeAlt"
 
 import ExternalLinks from "./ExternalLinks"
 import { device } from "../deviceSizes"
 
-const NavWrapper = styled.nav({
-    height: "95px",
-    background: "#2d3334",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    position: "fixed",
-    width: "100%",
-    zIndex: 2
-})
+const NavWrapper = styled.nav`
+    height: 95px;
+    background: #2d3334;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+`
 
 const StyledCodeIcon = styled(CodeAlt)`
     color: #fa8c83;
     height: 65px;
-    width: auto;
-    margin: 0 202px 0 18px;
-    transition: transform 0.5s;
+    margin: 0 200px 0 18px;
 
-    &:hover {
-        color: #99edcc;
-        transform: scale(0.9);
+    @media ${device.laptop} {
+        margin: 0 0px 0 18px;
     }
 
     @media ${device.tablet} {
-        margin: 18px;
+        display: none;
     }
 `
 
-const PageLinkWrapper = styled.div({
-    display: "flex",
-    margin: "24px"
-})
+const PageLinkWrapper = styled.div`
+    display: flex;
+    margin: 24px;
+    justify-self: center;
+`
 
 // TODO needs media query at 745px
 const StyledPageLink = styled(Link)`
@@ -64,8 +62,8 @@ const StyledPageLink = styled(Link)`
         width: 100%;
     }
 
-    @media ${device.tablet} {
-        margin: 0 12px 0 12px;
+    @media ${device.customTabs} {
+        font-size: 16px;
     }
 `
 

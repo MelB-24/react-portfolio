@@ -3,11 +3,16 @@ import styled from "@emotion/styled"
 import { Github } from "@styled-icons/boxicons-logos/Github"
 import { LinkedinSquare } from "@styled-icons/boxicons-logos/LinkedinSquare"
 import { Email } from "@styled-icons/material-outlined/Email"
+import { device } from "../deviceSizes"
 
 const LinkWrapper = styled.div`
     display: flex;
     margin: 0 18px 0 18px;
     width: 220px;
+
+    @media ${device.customLinks} {
+        display: none;
+    }
 `
 
 const GitHubIcon = styled(Github)`
@@ -21,6 +26,10 @@ const GitHubIcon = styled(Github)`
         background: #99edcc;
         color: #2d3334;
         transform: scale(0.9);
+    }
+
+    @media ${device.tablet} {
+        height: 30px;
     }
 `
 
@@ -36,6 +45,10 @@ const LinkedinIcon = styled(LinkedinSquare)`
         color: #2d3334;
         transform: scale(0.9);
     }
+
+    @media ${device.tablet} {
+        height: 30px;
+    }
 `
 
 const EmailIcon = styled(Email)`
@@ -49,6 +62,10 @@ const EmailIcon = styled(Email)`
         background: #99edcc;
         color: #2d3334;
         transform: scale(0.9);
+    }
+
+    @media ${device.tablet} {
+        height: 30px;
     }
 `
 
