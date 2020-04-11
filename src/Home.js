@@ -19,7 +19,7 @@ const HomeContent = styled.div`
     font-family: "Lato";
 
     @media ${device.tablet} {
-        width: 80%;
+        width: 90%;
     }
 `
 
@@ -44,9 +44,9 @@ function Home() {
                     </Heading>
                     <br />
                     <SubHeading>
-                        You can check out my projects I've completed so far in
-                        the project tab! Feel free to contact me via the online
-                        form, email or phone.
+                        You can check out my projects I've completed so far
+                        below! Feel free to contact me via the online form,
+                        email or LinkedIn.
                     </SubHeading>
                 </HomeContent>
             </HomeContainer>
