@@ -35,22 +35,20 @@ const SubHeading = styled.div`
 
 function Home() {
     return (
-        <>
-            <HomeContainer id="home">
-                <HomeContent>
-                    <Heading>
-                        Hello, My name is Melissa Bykersma and I'm a Junior
-                        Software Developer.
-                    </Heading>
-                    <br />
-                    <SubHeading>
-                        You can check out my projects I've completed so far
-                        below! Feel free to contact me via the online form,
-                        email or LinkedIn.
-                    </SubHeading>
-                </HomeContent>
-            </HomeContainer>
-        </>
+        <HomeContainer id="home">
+            <HomeContent>
+                <Heading>
+                    Hello, My name is Melissa Bykersma and I'm a Junior Software
+                    Developer.
+                </Heading>
+                <br />
+                <SubHeading>
+                    You can check out my projects I've completed so far below!
+                    Feel free to contact me via the online form, email or
+                    LinkedIn.
+                </SubHeading>
+            </HomeContent>
+        </HomeContainer>
     )
 }
 

@@ -7,10 +7,9 @@ import { device } from "./deviceSizes"
 // const fadeInRightAnimation = keyframes`${fadeInRight}`
 
 const AboutWrapper = styled.div`
-    height: calc(100vh - 95px);
+    height: max-content;
     font-family: "Lato";
     color: #2d3334;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,6 +20,7 @@ const AboutTextWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     width: 900px;
+    margin: 36px;
 
     @media ${device.tablet} {
         max-width: 700px;
@@ -52,6 +52,15 @@ const StyledImage = styled.img`
     float: right;
     position: relative;
     top: -150px;
+
+    @media ${device.tablet} {
+        float: unset;
+        position: unset;
+        top: unset;
+        display: block;
+        margin: 0 auto;
+        padding: 24px;
+    }
 `
 
 function About() {
