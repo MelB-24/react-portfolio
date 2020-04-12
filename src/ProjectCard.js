@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Github } from "@styled-icons/boxicons-logos/Github"
+import { device } from "./deviceSizes"
 
 const Heading = styled.a`
     display: none;
@@ -8,12 +9,20 @@ const Heading = styled.a`
     font-weight: bold;
     color: white;
     margin: 0;
+
+    @media ${device.mobileL} {
+        font-size: 20px;
+    }
 `
 
 const GitHubIcon = styled(Github)`
     height: 50px;
     display: none;
     color: white;
+
+    @media ${device.mobileL} {
+        height: 30px;
+    }
 `
 
 const Language = styled.p`
@@ -26,13 +35,10 @@ const ProjectCardWrapper = styled.div`
     width: 400px;
     height: 200px;
     font-family: "Lato";
-    background: rgba(45, 51, 52, 0.05);
-    background-image: linear-gradient(
-            rgba(45, 51, 52, 0.05),
-            rgba(45, 51, 52, 0.05)
-        ),
-        url(${props => props.image});
+
+    background-image: url(${props => props.image});
     background-size: contain;
+    background-repeat: no-repeat;
     margin: 4px;
     padding: 12px;
     display: flex;
@@ -55,6 +61,11 @@ const ProjectCardWrapper = styled.div`
     &:hover ${Language} {
         display: inline;
     }
+
+    @media ${device.mobileL} {
+        width: 70vw;
+        height: 153px;
+    }
 `
 
 const GitHubLink = styled.a``
@@ -67,7 +78,6 @@ class ProjectCard extends React.Component {
 
     render() {
         const { project } = this.props
-        console.log(project)
         return (
             <ProjectCardWrapper image={project.photoUrl}>
                 <Heading href={"http://" + project.url} target="_blank">

@@ -6,13 +6,13 @@ import { device } from "./deviceSizes"
 
 const ProjectWrapper = styled.div`
     background: #fa8c83;
-    height: calc(100vh - 95px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @media ${device.tablet} {
-        height: 100vh;
+    @media ${device.customProjects} {
+        height: max-content;
     }
 `
 
