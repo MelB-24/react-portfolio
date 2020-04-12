@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { device } from "./deviceSizes"
+import ExternalLinks from "./common/ExternalLinks"
 
 const ContactMeWrapper = styled.div`
     height: calc(100vh - 95px);
@@ -146,6 +147,7 @@ class ContactMe extends React.Component {
                             <FormSubmitButton type="submit" value="send" />
                         </FormWrapper>
                     )}
+                    <ExternalLinks />
                 </ContentWrapper>
             </ContactMeWrapper>
         )

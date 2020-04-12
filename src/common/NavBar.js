@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link, animateScroll as scroll } from "react-scroll"
 import { CodeAlt } from "@styled-icons/boxicons-regular/CodeAlt"
+import MediaQuery from "react-responsive"
 
 import ExternalLinks from "./ExternalLinks"
 import { device } from "../deviceSizes"
@@ -34,10 +35,17 @@ const StyledCodeIcon = styled(CodeAlt)`
 const PageLinkWrapper = styled.div`
     display: flex;
     margin: 24px;
-    justify-self: center;
+
+    @media ${device.mobileL} {
+        width: 100vw;
+        justify-content: space-around;
+    }
+
+    @media ${device.customLinks} {
+        margin: 6px;
+    }
 `
 
-// TODO needs media query at 745px
 const StyledPageLink = styled(Link)`
     font-family: "Lato";
     color: white;
@@ -60,6 +68,10 @@ const StyledPageLink = styled(Link)`
 
     &:hover:after {
         width: 100%;
+    }
+
+    @media ${device.tablet} {
+        margin: 0 8px 0 8px;
     }
 
     @media ${device.customTabs} {
@@ -113,7 +125,9 @@ function NavBar() {
                     contact
                 </StyledPageLink>
             </PageLinkWrapper>
-            <ExternalLinks />
+            <MediaQuery query={device.customExternalLinks}>
+                <ExternalLinks />
+            </MediaQuery>
         </NavWrapper>
     )
 }

@@ -9,9 +9,10 @@ const LinkWrapper = styled.div`
     display: flex;
     margin: 0 18px 0 18px;
     width: 220px;
+    justify-content: space-around;
 
     @media ${device.customLinks} {
-        display: none;
+        margin: 0 6px 0 6px;
     }
 `
 
@@ -31,6 +32,10 @@ const GitHubIcon = styled(Github)`
     @media ${device.tablet} {
         height: 30px;
     }
+
+    @media ${device.customLinks} {
+        margin: 1px;
+    }
 `
 
 const LinkedinIcon = styled(LinkedinSquare)`
@@ -49,6 +54,10 @@ const LinkedinIcon = styled(LinkedinSquare)`
     @media ${device.tablet} {
         height: 30px;
     }
+
+    @media ${device.customLinks} {
+        margin: 1px;
+    }
 `
 
 const EmailIcon = styled(Email)`
@@ -66,6 +75,10 @@ const EmailIcon = styled(Email)`
 
     @media ${device.tablet} {
         height: 30px;
+    }
+
+    @media ${device.customLinks} {
+        margin: 1px;
     }
 `
 

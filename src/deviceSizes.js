@@ -6,7 +6,7 @@ const size = {
     laptop: "1024px",
     laptopL: "1440px",
     desktop: "2560px",
-    customLinks: "683px",
+    customLinks: "580px",
     customTabs: "505px",
     customProjects: "936px"
 }
@@ -22,5 +22,6 @@ export const device = {
     desktopL: `(max-width: ${size.desktop})`,
     customLinks: `(max-width: ${size.customLinks})`,
     customTabs: `(max-width: ${size.customTabs})`,
-    customProjects: `(max-width: ${size.customProjects})`
+    customProjects: `(max-width: ${size.customProjects})`,
+    customExternalLinks: `(min-width: ${size.mobileL})`
 }
