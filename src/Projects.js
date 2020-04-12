@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import RotateLoader from "react-spinners/RotateLoader"
 
 import ProjectCard from "./ProjectCard"
 import { device } from "./deviceSizes"
@@ -52,7 +53,7 @@ class Projects extends React.Component {
                 return <ProjectCard key={index} project={project} />
             })
         } else {
-            return <h1>loading</h1>
+            return <RotateLoader loading={loading} color={"#2d3334"} />
         }
     }
 
