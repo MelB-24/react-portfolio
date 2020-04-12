@@ -45,6 +45,14 @@ const ResumeDownloadLink = styled.a`
 
 const AboutText = styled.p`
     font-size: 20px;
+
+    @media ${device.tablet} {
+        font-size: 18px;
+    }
+
+    @media ${device.mobileL} {
+        font-size: 16px;
+    }
 `
 
 const StyledImage = styled.img`
@@ -60,6 +68,7 @@ const StyledImage = styled.img`
         display: block;
         margin: 0 auto;
         padding: 24px;
+        height: 140px;
     }
 `
 
