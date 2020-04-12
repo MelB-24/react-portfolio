@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { device } from "./deviceSizes"
 
 const ContactMeWrapper = styled.div`
     height: calc(100vh - 95px);
@@ -20,7 +21,7 @@ const ContactMeHeader = styled.h1`
     margin: 0;
     color: white;
     font-family: "Lato";
-    padding: 36px;
+    padding: 0px 36px 0 36px;
 `
 
 const FormWrapper = styled.form`
@@ -29,6 +30,14 @@ const FormWrapper = styled.form`
     width: 60%;
     font-family: "Lato";
     color: #fa8c83;
+
+    @media ${device.tablet} {
+        width: 80%;
+    }
+
+    @media ${device.mobileL} {
+        width: 90%;
+    }
 `
 
 const FormLabel = styled.label`
@@ -38,7 +47,7 @@ const FormLabel = styled.label`
 
 const FormInput = styled.input`
     height: 36px;
-    border-radius: 6px;
+    border-radius: 2px;
     border: none;
     font-size: 18px;
     font-family: "Lato";
@@ -47,23 +56,24 @@ const FormInput = styled.input`
 
 const FormTextArea = styled.textarea`
     height: 128px;
-    border-radius: 6px;
+    border-radius: 2px;
     border: none;
-    font-size: 18px;
+    font-size: 15px;
     font-family: "Lato";
     padding: 2px;
 `
 
 const FormSubmitButton = styled.input`
-    border: none;
+    border: solid #99edcc;
     margin: 30px;
-    border-radius: 6px;
-    padding: 24px 0px;
+    border-radius: 2px;
+    padding: 12px 0px;
     width: 50%;
     align-self: center;
-    font-size: 22px;
-    background: #99edcc;
+    font-size: 20px;
+    background: none;
     cursor: pointer;
+    color: white;
 `
 
 class ContactMe extends React.Component {
@@ -133,7 +143,7 @@ class ContactMe extends React.Component {
                                 onChange={this.handleValueChange}
                             ></FormTextArea>
 
-                            <FormSubmitButton type="submit" value="Send" />
+                            <FormSubmitButton type="submit" value="send" />
                         </FormWrapper>
                     )}
                 </ContentWrapper>
