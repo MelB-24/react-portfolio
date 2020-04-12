@@ -82,6 +82,11 @@ const FormSubmitButton = styled.input`
     color: white;
 `
 
+const SuccessErrorMessage = styled.p`
+    font-family: "Lato";
+    color: #99edcc;
+`
+
 class ContactMe extends React.Component {
     state = {
         name: "",
@@ -118,9 +123,13 @@ class ContactMe extends React.Component {
         const { isSuccessful } = this.props
 
         if (isSuccessful) {
-            return <p>Email sent</p>
+            return <SuccessErrorMessage>Email sent</SuccessErrorMessage>
         } else if (isSuccessful === false) {
-            return <p>Error in sending, please try again.</p>
+            return (
+                <SuccessErrorMessage>
+                    Error in sending, please try again.
+                </SuccessErrorMessage>
+            )
         }
     }
 
@@ -132,7 +141,7 @@ class ContactMe extends React.Component {
                     <ContactMeHeader>Contact Me</ContactMeHeader>
                     {this.handleSuccessMessageRender()}
                     {loading ? (
-                        <p>Sending...</p>
+                        <SuccessErrorMessage>Sending...</SuccessErrorMessage>
                     ) : (
                         <FormWrapper method="POST" onSubmit={this.handleSubmit}>
                             <FormLabel htmlFor="name">Name</FormLabel>
