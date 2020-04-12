@@ -11,6 +11,10 @@ const HomeContainer = styled.div`
     display: flex;
     align-items: center;
     border-bottom: solid #fa8c83 6px;
+
+    @media ${device.mobileS} {
+        height: 100vh;
+    }
 `
 
 const HomeContent = styled.div`
@@ -26,11 +30,19 @@ const HomeContent = styled.div`
 const Heading = styled.div`
     color: #fa8c83;
     font-size: 36px;
+
+    @media ${device.mobileS} {
+        font-size: 30px;
+    }
 `
 
 const SubHeading = styled.div`
     color: white;
     font-size: 24px;
+
+    @media ${device.mobileS} {
+        font-size: 20px;
+    }
 `
 
 function Home() {
