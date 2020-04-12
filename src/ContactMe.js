@@ -66,6 +66,7 @@ const FormTextArea = styled.textarea`
     font-size: 15px;
     font-family: "Lato";
     padding: 2px;
+    resize: none;
 `
 
 const FormSubmitButton = styled.input`
