@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import image from "./about-illustration.svg"
 import { device } from "./deviceSizes"
 // import { fadeInRight } from "react-animations"
@@ -43,8 +43,9 @@ const ResumeDownloadLink = styled.a`
     }
 `
 
-const AboutText = styled.p`
+const AboutText = styled.article`
     font-size: 20px;
+    margin: 20px 0;
 
     @media ${device.tablet} {
         font-size: 18px;

@@ -74,7 +74,9 @@ const LanguageWrapper = styled.div``
 
 class ProjectCard extends React.Component {
     handleLanguagesRender = languages =>
-        languages.map(language => <Language>{language}</Language>)
+        languages.map((language, index) => (
+            <Language key={index}>{language}</Language>
+        ))
 
     render() {
         const { project } = this.props
