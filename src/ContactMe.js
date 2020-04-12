@@ -8,6 +8,10 @@ const ContactMeWrapper = styled.div`
     background: #2d3334;
     display: flex;
     justify-content: center;
+
+    @media ${device.mobileS} {
+        height: max-content;
+    }
 `
 
 const ContentWrapper = styled.div`
