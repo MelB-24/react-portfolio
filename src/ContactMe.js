@@ -101,8 +101,18 @@ class ContactMe extends React.Component {
         const { name, email, message } = this.state
         const { handleContactEmail } = this.props
 
-        handleContactEmail({ emailContents: { name, email, message } })
+        if (!(name.length <= 0 || email.length <= 0 || message.length <= 0)) {
+            handleContactEmail({ emailContents: { name, email, message } })
+        }
     }
+
+    // handleValidationMessageRender = () => {
+    //     const { formValid } = this.state
+
+    //     if (!formValid) {
+    //         return <p>Form Entries are invalid</p>
+    //     }
+    // }
 
     handleSuccessMessageRender = () => {
         const { isSuccessful } = this.props
