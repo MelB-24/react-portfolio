@@ -4,9 +4,7 @@
     "es2021": true
   },
   "extends": [
-    "standard-with-typescript",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
     "airbnb",
     "airbnb-typescript",
     "airbnb/hooks", // React
@@ -27,14 +25,22 @@
     "react", "@typescript-eslint"
   ],
   "rules": {
-    "prettier/prettier": 0, // Disable Prettier
-    "import/no-cycle": 0, // Slows down all linting
+    // suppress errors for missing 'import React' in files (Next.js does automatically)
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    // Disable Prettier
+    "prettier/prettier": 0,
+    // Slows down all linting
+    "import/no-cycle": 0,
     "react/jsx-filename-extension": [1, {
       "extensions": [".jsx", ".tsx"] // .jsx/.tsx for UI, no UI in .js/.ts
     }],
-    "react/jsx-props-no-spreading": 0, // Enable Prop Spreading
-    "@typescript-eslint/no-empty-interface": 0, // Allow boilerplate empty interfaces for defining component props explicitly
-    "@typescript-eslint/no-explicit-any": 0, // Nice for TS newbies but easily misused
+    // Enable Prop Spreading
+    "react/jsx-props-no-spreading": 0,
+    // Allow boilerplate empty interfaces for defining component props explicitly
+    "@typescript-eslint/no-empty-interface": 0,
+    // Nice for TS newbies but easily misused
+    // "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/explicit-function-return-type": [0, {
       "allowExpressions": false
     }],
@@ -43,11 +49,41 @@
     "@typescript-eslint/no-unsafe-return": 0,
     "@typescript-eslint/no-unsafe-assignment": 0,
     "@typescript-eslint/no-unsafe-member-access": 0,
-    "@typescript-eslint/comma-dangle": 1,
     "react/prop-types": 0,
+    "@typescript-eslint/no-unused-vars": [1, { "varsIgnorePattern": "^_" }],
+    "object-curly-newline": 0,
+    "@typescript-eslint/comma-dangle": 1,
+    "@typescript-eslint/semi": 1,
+    "no-multiple-empty-lines": 1,
+    "no-trailing-spaces": 1,
+    "eol-last": 0,
+    "arrow-body-style": ["warn", "as-needed"],
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/indent": 1,
+    "react/jsx-key": 2,
+    "react/jsx-indent": 1,
+    "react/self-closing-comp": 1,
+    "no-alert": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "no-void": 0,
+    "consistent-return": 0,
+    "react/function-component-definition": [1, {
+      "namedComponents": "arrow-function",
+      "unnamedComponents": "arrow-function"
+    }],
+    "max-len": ["warn",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
     "@typescript-eslint/naming-convention": [2, {
       "selector": "default",
-      "format": ["camelCase", "PascalCase", "UPPER_CASE"],
+      "format": ["camelCase", "PascalCase", "UPPER_CASE", "snake_case"],
       "leadingUnderscore": "allow",
       "filter": {
         "regex": "__typename",
