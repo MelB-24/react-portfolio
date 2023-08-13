@@ -4,7 +4,7 @@ import NumberInput from '../NumberInput';
 import RadioGroup from '../RadioGroup';
 
 import { CalcContainer, Heading, DepositCalculatorContainer } from './Styles';
-import { calculateCompoundInterest, calculateSimpleInterest } from '../../lib/utils';
+import { calculateCompoundInterest, calculateSimpleInterest, formatDollar } from '../../lib/utils';
 
 const DepositCalculator: React.FC<DepositCalculatorProps> = () => {
   const [startingAmount, setStartingAmount] = useState('10000');
@@ -48,12 +48,7 @@ const DepositCalculator: React.FC<DepositCalculatorProps> = () => {
       });
     }
 
-    const formattedResult = (result || 0).toLocaleString('en-AU', {
-      style: 'currency',
-      currency: 'AUD',
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
+    const formattedResult = formatDollar(result);
 
     return formattedResult;
   };

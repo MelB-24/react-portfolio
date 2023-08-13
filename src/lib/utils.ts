@@ -70,3 +70,19 @@ export const calculateSimpleInterest = ({
 
   return depositAmount + interestEarned;
 };
+
+/**
+ * Function to format dollars to string
+ * @param result - dollar amount to display
+ * @returns Nicely formatted string to 2 decimal places with dollar sign
+ */
+export const formatDollar = (result: number) => {
+  const formattedResult = (result || 0).toLocaleString('en-AU', {
+    style: 'currency',
+    currency: 'AUD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+
+  return formattedResult;
+};
