@@ -68,6 +68,8 @@ const DepositCalculator: React.FC<DepositCalculatorProps> = () => {
         <RadioGroup value={interestPaidFreq} setValue={setInterestPaidFreq} label="Interest Paid" radioOptions={radioOptions} />
       </CalcContainer>
       <p>
+        Final Balance:
+        {' '}
         {finalBalance()}
       </p>
     </DepositCalculatorContainer>
