@@ -73,9 +73,15 @@ const DepositCalculator: React.FC<DepositCalculatorProps> = () => {
           value={investmentTermMonths}
           setValue={setInvestmentTermMonths}
           label="Investment Term (months)"
-          htmlFor="invetment-term"
+          htmlFor="investment-term"
         />
-        <RadioGroup value={interestPaidFreq} setValue={setInterestPaidFreq} label="Interest Paid" radioOptions={radioOptions} />
+        <RadioGroup
+          value={interestPaidFreq}
+          setValue={setInterestPaidFreq}
+          label="Interest Paid"
+          radioOptions={radioOptions}
+          isOptionDisabled={(optionValue: string) => optionValue === 'annual' && parseInt(investmentTermMonths, 10) < 12}
+        />
       </CalcContainer>
       <p data-testid="final-balance">
         Final Balance:
