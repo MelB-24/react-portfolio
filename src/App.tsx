@@ -1,9 +1,9 @@
 import React from 'react';
 
+import DepositCalculator from './components/DepositCalculator';
+
 const App = () => (
-  <div>
-    <h1>Term Deposit Calculator</h1>
-  </div>
+  <DepositCalculator />
 );
 
 export default App;
