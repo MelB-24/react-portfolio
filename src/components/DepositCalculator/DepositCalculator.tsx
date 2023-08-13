@@ -62,12 +62,27 @@ const DepositCalculator: React.FC<DepositCalculatorProps> = () => {
     <DepositCalculatorContainer>
       <Heading>Term Deposit Calculator</Heading>
       <CalcContainer>
-        <NumberInput value={startingAmount} setValue={setStartingAmount} label="Starting Deposit ($)" />
-        <NumberInput value={interestRatePercent} setValue={setInterestRatePercent} label="Interest Rate (% p.a.)" />
-        <NumberInput value={investmentTermMonths} setValue={setInvestmentTermMonths} label="Investment Term (months)" />
+        <NumberInput
+          value={startingAmount}
+          setValue={setStartingAmount}
+          label="Starting Deposit ($)"
+          htmlFor="starting-deposit"
+        />
+        <NumberInput
+          value={interestRatePercent}
+          setValue={setInterestRatePercent}
+          label="Interest Rate (% p.a.)"
+          htmlFor="interest-rate"
+        />
+        <NumberInput
+          value={investmentTermMonths}
+          setValue={setInvestmentTermMonths}
+          label="Investment Term (months)"
+          htmlFor="invetment-term"
+        />
         <RadioGroup value={interestPaidFreq} setValue={setInterestPaidFreq} label="Interest Paid" radioOptions={radioOptions} />
       </CalcContainer>
-      <p>
+      <p data-testid="final-balance">
         Final Balance:
         {' '}
         {finalBalance()}
