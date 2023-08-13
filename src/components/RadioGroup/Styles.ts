@@ -22,13 +22,14 @@ export const RadioButton = styled.input`
   visibility: hidden;
 `;
 
-export const ButtonLabel = styled.label<{ checked: boolean }>`
+export const ButtonLabel = styled.label<{ checked: boolean; disabled: boolean }>`
   font-size: 0.9rem;
   padding: 0.3rem 1.1rem;
   border-radius: 1.5rem;
-  background: ${({ checked }) => (checked ? '#493EE3;' : '#498EE3;')};
+  background: ${({ checked }) => (checked ? '#493EE3' : '#498EE3')};
   color: white;
   cursor: pointer;
+  opacity: ${({ disabled }) => (disabled ? '40%' : '100%')};
 `;
 
 export const ButtonRow = styled.div`
